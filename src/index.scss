@@ -1,4 +1,10 @@
+@import './libs/normalize';
 @import './scss/variables';
 @import './scss/fonts';
 @import './scss/default';
-
+@import './scss/header/header';
+@import './scss/header/search';
+@import './scss/catalog/catalog-page';
+@import './scss/goods-item';
+@import './scss/footer/footer';
+@import './scss/footer/social';

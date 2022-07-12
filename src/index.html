@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <h1 class="visually-hidden">Techno Shop - онлайн-магазин гаджетов</h1>
-        <div class="container">
+        <div class="container header__container">
             <a href="/"><img class="header__logo" src="img/logo.svg" alt="Techno Shop - онлайн-магазин гаджетов"></a>
 
             <form class="header__search search">
@@ -217,84 +217,96 @@
                     <aside class="catalog__filter filter">
                         <form class="filter__form">
                             <h3 class="filter__title">Фильтры</h3>
-                            <button class="filter__reset" type="reset">Очистить всё</button>
 
-                            <fieldset class="filter__field">
-                                <legend class="filter__field-title">Цены</legend>
+                            <div class="filter__fields_list">
 
-                                <div class="filter__flex">
-                                    <label><input type="number" name="price-start" placeholder="от"
-                                            class="filter__input"></label>
-                                    <label><input type="number" name="price-end" placeholder="до"
-                                            class="filter__input"></label>
-                                </div>
-                            </fieldset>
+                                <fieldset class="filter__field">
+                                    <legend class="filter__field-title">Цены</legend>
 
-                            <fieldset class="filter__field">
-                                <legend class="filter__field-title">Категория</legend>
+                                    <div class="filter__flex">
+                                        <label><input type="number" name="price-start" placeholder="от"
+                                                class="filter__input"></label>
+                                        <label><input type="number" name="price-end" placeholder="до"
+                                                class="filter__input"></label>
+                                    </div>
+                                </fieldset>
 
-                                <div class="filter__flex">
-                                    <label>
-                                        <select class="filter__select" name="category">
-                                            <option value="phones">Смартфоны</option>
-                                            <option value="tablets">Планшеты</option>
-                                            <option value="clocks">Умные часы</option>
-                                            <option value="laptops">Ноутбуки</option>
-                                            <option value="mono">Моноблоки</option>
-                                        </select>
-                                    </label>
-                                </div>
-                            </fieldset>
+                                <fieldset class="filter__field">
+                                    <legend class="filter__field-title">Категория</legend>
 
-                            <fieldset class="filter__field">
-                                <legend class="filter__field-title">Диагональ</legend>
+                                    <div class="filter__flex">
+                                        <label>
+                                            <select class="filter__input filter__input_select" name="category">
+                                                <option value="phones">Смартфоны</option>
+                                                <option value="tablets">Планшеты</option>
+                                                <option value="clocks">Умные часы</option>
+                                                <option value="laptops">Ноутбуки</option>
+                                                <option value="mono">Моноблоки</option>
+                                            </select>
+                                        </label>
+                                    </div>
+                                </fieldset>
 
-                                <div class="filter__flex">
-                                    <label><input type="number" name="diagonal-start" placeholder="от"
-                                            class="filter__input"></label>
-                                    <label><input type="number" name="diagonal-end" placeholder="до"
-                                            class="filter__input"></label>
-                                </div>
-                            </fieldset>
+                                <fieldset class="filter__field">
+                                    <legend class="filter__field-title">Диагональ</legend>
 
-                            <fieldset class="filter__field">
-                                <legend class="filter__field-title">Цвет</legend>
+                                    <div class="filter__flex">
+                                        <label>
+                                            <input class="filter__input" type="number" name="diagonal-start"
+                                                placeholder="от">
+                                        </label>
+                                        <label>
+                                            <input class="filter__input" type="number" name="diagonal-end"
+                                                placeholder="до">
+                                        </label>
+                                    </div>
+                                </fieldset>
 
-                                <div class="filter__flex">
-                                    <label>
-                                        <input class="filter__checkbox" type="checkbox" value="white" name="color">
-                                        Белый
-                                    </label>
-                                    <label>
-                                        <input class="filter__checkbox" type="checkbox" value="black" name="color">
-                                        Чёрный
-                                    </label>
-                                    <label>
-                                        <input class="filter__checkbox" type="checkbox" value="silver" name="color">
-                                        Серебристый
-                                    </label>
-                                    <label>
-                                        <input class="filter__checkbox" type="checkbox" value="red" name="color">
-                                        Красный
-                                    </label>
-                                    <label>
-                                        <input class="filter__checkbox" type="checkbox" value="green" name="color">
-                                        Зелёный
-                                    </label>
-                                    <label>
-                                        <input class="filter__checkbox" type="checkbox" value="gold" name="color">
-                                        Золотой
-                                    </label>
-                                </div>
-                            </fieldset>
+                                <fieldset class="filter__field">
+                                    <legend class="filter__field-title">Цвет</legend>
+
+                                    <div class="filter__flex filter__flex_column">
+                                        <label>
+                                            <input class="filter__checkbox" type="checkbox" value="white" name="color">
+                                            Белый
+                                        </label>
+                                        <label>
+                                            <input class="filter__checkbox" type="checkbox" value="black" name="color">
+                                            Чёрный
+                                        </label>
+                                        <label>
+                                            <input class="filter__checkbox" type="checkbox" value="silver" name="color">
+                                            Серебристый
+                                        </label>
+                                        <label>
+                                            <input class="filter__checkbox" type="checkbox" value="red" name="color">
+                                            Красный
+                                        </label>
+                                        <label>
+                                            <input class="filter__checkbox" type="checkbox" value="green" name="color">
+                                            Зелёный
+                                        </label>
+                                        <label>
+                                            <input class="filter__checkbox" type="checkbox" value="gold" name="color">
+                                            Золотой
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                            </div>
 
                             <button class="filter__apply" type="submit">Применить фильтр</button>
+                            <button class="filter__reset" type="reset">Очистить всё</button>
                         </form>
                     </aside>
 
                     <div class="catalog__pagination pagination">
                         <a href="#" class="pagination__arrow pagination__arrow_start"
-                            aria-label="Перейти на первую страницу"></a>
+                            aria-label="Перейти на первую страницу">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.09198 2.49205L3.59598 8.00005L9.09198 13.508L7.39998 15.2L0.19998 8.00005L7.39998 0.800049L9.09198 2.49205Z" fill="#CDCDCD"/>
+                                </svg>
+                        </a>
 
                         <ul class="pagination__list">
                             <li class="pagination__item">
@@ -318,7 +330,13 @@
                         </ul>
 
                         <a href="#" class="pagination__arrow pagination__arrow_end"
-                            aria-label="Перейти на последнюю страницу"></a>
+                            aria-label="Перейти на последнюю страницу">
+                            <svg width="10" height="16" viewBox="0 0 10 16" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.90802 2.49205L6.40402 8.00005L0.90802 13.508L2.60002 15.2L9.80002 8.00005L2.60002 0.800049L0.90802 2.49205Z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -328,9 +346,12 @@
 
     <footer class="footer">
         <h2 class="visually-hidden">Подвал сайта</h2>
-        <div class="container">
-            <a href="/"><img src="img/logo.svg" alt="Techno Shop - онлайн-магазин гаджетов" class="footer__logo"></a>
-
+        <div class="container footer__container">
+            <div class="footer__column">
+                <a href="/" class="footer__logo-link">
+                    <img src="img/logo.svg" alt="Techno Shop - онлайн-магазин гаджетов" class="footer__logo">
+                </a>
+            </div>
 
             <div class="footer__column">
                 <h3 class="footer__column-title">Каталог</h3>
@@ -362,11 +383,11 @@
             <div class="footer__column">
                 <h3 class="footer__column-title">Контакты</h3>
 
-                <ul class="footer__list footer__list_contacts">
-                    <li class="footer__item">
+                <ul class="footer__list footer__list_contact">
+                    <li class="footer__item footer__item_contacts">
                         Тел: <a href="tel:89149239223" class="footer__link">8 914 923 92 - 23</a>
                     </li>
-                    <li class="footer__item">
+                    <li class="footer__item footer__item_contact">
                         Email: <a href="mailto:technoshop@gmail.com" class="footer__link">TechnoSHOP@gmail.com</a>
                     </li>
                 </ul>
@@ -402,6 +423,16 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+
+            <div class="footer__column footer__copyright">© TechnoSHOP, 2022</div>
+
+            <div class="footer__column"></div>
+            <div class="footer__column"></div>
+
+            <div class="footer__column footer__made-by">
+                Design by Anastasia Ilina
+                Tg: @Mrshmallowww
             </div>
         </div>
     </footer>
